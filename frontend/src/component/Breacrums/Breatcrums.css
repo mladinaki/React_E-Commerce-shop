@@ -1,0 +1,15 @@
+.Breatcrums {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 10px 0;
+    gap: 8px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+@media(max-width:600px){
+    .Breatcrums span{
+        
+        font-size: 12px;
+    }
+}

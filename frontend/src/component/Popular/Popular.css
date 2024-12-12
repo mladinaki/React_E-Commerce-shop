@@ -1,0 +1,36 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+}
+
+.popular h2 {
+    font-size: 30px;
+    padding: 30px;
+    font-weight: 300;
+}
+
+.popular hr {
+    width: 50%;
+    margin-left: 70px;
+    margin-top: 5px;
+    text-align: center;
+    
+}
+
+.populaye-item {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    gap: 20px;
+    box-shadow: 0px 2px 3px #efefef;
+    padding-bottom: 50px;
+}
+
+@media(max-width:1280px){
+    .popular h2{
+        font-size: 22px;
+    }
+}
+
