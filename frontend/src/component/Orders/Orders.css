@@ -1,57 +1,94 @@
-.cart-item-row-order{
-    /* border:  1px solid black; */
-    display: flex;
-    padding: 5px;
+.cart-item-row-order {
+  /* border:  1px solid black; */
+  display: flex;
+  padding: 10px;
+}
+
+.cart-item hr {
+  border: 1px solid rgb(217, 217, 217);
 }
 
 .cart-item-row-order p {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* border: 1px solid black; */
+  font-size: 13px;
+  font-weight: 300;
+  /* border: 1px solid black; */
 }
 
-.cartItem-format img{
-    display: flex;
-    width: 80px;
-    height: 80px;
-
+.cartItem-format img {
+  display: flex;
+  width: 5em;
+  /* height: 5em; */
+  /* margin: 12px 0px; */
 }
 
-.status button{
-    border: 1px solid rgb(201, 201, 201);
-    width: 100px;
-    position: relative;
-    top: 20px;
-    right: 15em;
-    font-weight: normal;
-
-}
-.status-2 button{
-    border: 1px solid rgb(201, 201, 201);
-    width: 100px;
-    position: relative;
-    top: 20px;
-    left: 10px;
-    font-weight: normal;
+.items-orders p span {
+  color: rgb(168, 168, 168);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
-.items-orders{
-    font-size: 13px;
-    display: inline;
-    padding: 0px 10px;
-    height: auto;
+.items-orders p {
+    font-weight: 300;
 }
 
-.price-item{
-    display: flex;
-    width: 33%;
-    /* padding: 10px; */
-    gap: 0px;
-    /* grid-template-columns: 1fr 1fr 1fr ; */
+.items-orders {
+  gap: 0px;
+  color: rgb(61, 61, 61);
+  margin-left: 5px;
+  /* font-weight: 600; */
 }
 
-.name-item{
-    color: tomato;
-    font-size: 15px;
-    font-weight: 500;
+.status-2 {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* box-sizing: border-box; */
+}
+
+.status-2 button {
+  width: 100px;
+  border: 1px solid rgb(197, 197, 197);
+  font-weight: normal;
+}
+
+.status {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+.status button {
+  width: 100px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.items-orders p {
+  font-size: 13px;
+  display: flex;
+  width: 150px;
+  /* padding: 5px; */
+  /* padding: 3px 0px; */
+  height: auto;
+  /* border: 1px solid black; */
+}
+
+.price-item {
+  display: flex;
+  width: 33%;
+  /* padding: 10px; */
+  /* grid-template-columns: 1fr 1fr 1fr ; */
+}
+
+p.name-item {
+  color: tomato;
+  font-size: 17px;
+  font-weight: 500;
 }
