@@ -12,13 +12,15 @@ import woman_4 from "./woman_4.jpg";
 import del_icon from "./delete_icon.png";
 import user from "./user.png";
 import upload from "./upload.png";
+import cube from "./cube.jpg";
 
 export const assets = {
     shop,
     bag_logo,
     del_icon,
     user,
-    upload
+    upload,
+    cube
 }
 
 // export const menu_list = [

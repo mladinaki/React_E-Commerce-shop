@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import "./AddProduct.css"
 import { assets } from '../../assets/assets'
-import useAddProduct from '../hooks/useAddProduct';
-import { ShopContext } from '../../../../frontend/src/component/contex/ShopContext';
-import { useContext } from 'react';
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const AddProduct = ({ token }) => {
+const AddProduct = ({ token,url }) => {
 
     // const { url } = useContext(ShopContext)
 
@@ -29,8 +26,7 @@ const AddProduct = ({ token }) => {
         formData.append("old_price", old_price)
         formData.append("sizes", JSON.stringify(sizes))
 
-        const response = await axios.post(`http://localhost:4005/upload/add`, formData, { headers: { token } });
-        console.log(response.data);
+        const response = await axios.post(`${url}/upload/add`, formData, { headers: { token } });
 
         if (response.data.success) {
             toast.success(response.data.message);

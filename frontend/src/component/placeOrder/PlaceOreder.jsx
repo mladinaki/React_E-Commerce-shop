@@ -13,7 +13,7 @@ const PlaceOreder = () => {
 
     const navigate = useNavigate()
 
-    const [method, setMethod] = useState('cod');
+    const [method, setMethod] = useState('COD');
 
     const [dataForm, setDataForm] = useState({
         firstName: '',
@@ -38,18 +38,20 @@ const PlaceOreder = () => {
         let orderItem = [];
 
         for (const items in cartItems) {
-            for (const item in [items]) {
+            for (const item in cartItems[items]) {
+                if (cartItems[items][item] > 0) {
 
-                const infoItem = structuredClone(all_product.find(product => product._id === items))
-
-                if (infoItem) {
-                    infoItem.sizes = item
-                    infoItem.quantity = cartItems[items][item];
-                    orderItem.push(infoItem);
+                    const infoItem = structuredClone(all_product.find(product => product._id === items))
+                    console.log(infoItem);
+                    
+                    if (infoItem) {
+                        infoItem.size = item
+                        infoItem.quantity = cartItems[items][item];
+                        orderItem.push(infoItem);
+                    }
                 }
             }
         }
-        console.log(orderItem);
 
         let orderDataItem = {
             address: dataForm,
@@ -58,9 +60,9 @@ const PlaceOreder = () => {
         }
 
         switch (method) {
-            case 'cod':
+            case 'COD':
                 const response = await axios.post(url + '/order/list', orderDataItem, { headers: { token } });
-                console.log(response.data.success);
+                console.log(response.data);
 
                 if (response.data.success) {
                     setCartItems({})

@@ -9,7 +9,7 @@ exports.authMiddleware = async (req, res, next) => {
         return res.json({ success: false, message: 'Not authorized Login' })
     }
     try {
-        const token_decode = await jwt.verify(token, JWT_SECRET_KEY)
+        const token_decode =  jwt.verify(token, JWT_SECRET_KEY)
         req.user = token_decode
         req.body.id = token_decode._id;
         next();

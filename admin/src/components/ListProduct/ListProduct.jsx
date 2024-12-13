@@ -8,7 +8,7 @@ const ListProduct = ({ url }) => {
     const [list, setProduct] = useState([])
 
     const fectList = async () => {
-        const response = await axios.get('http://localhost:4005/upload/list');
+        const response = await axios.get(`${url}/upload/list`);
 
         if (response.data.success) {
             setProduct(response.data.products);
@@ -16,7 +16,7 @@ const ListProduct = ({ url }) => {
     }
 
     const ListRemove = async (productId) => {
-        const response = await axios.post('http://localhost:4005/upload/remove-product', { id: productId });
+        const response = await axios.post(`${url}/upload/remove-product`, { id: productId });
         fectList();
 
         if (response.data.success) {
@@ -47,7 +47,7 @@ const ListProduct = ({ url }) => {
                     <hr />
                     {list.map((item, index) => {
                         return <div key={index} className='item-main-item'>
-                            <img src={'http://localhost:4005/images/' + item.image} alt="" className='image-format' />
+                            <img src={`${url}/images/` + item.image} alt="" className='image-format' />
                             <p className='name-item'>{item.name.toString().toUpperCase()}</p>
                             <p>${item.old_price.toFixed(2)}</p>
                             <p>${item.new_price.toFixed(2)}</p>

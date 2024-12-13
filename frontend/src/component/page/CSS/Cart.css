@@ -36,7 +36,7 @@ img .carImg {
     transition: transform 0.3s ease-in-out;
 }
 
-img.carImg:hover{
+img.carImg:hover {
     transform: scale(1.1);
 }
 
@@ -48,8 +48,6 @@ img.carImg:hover{
     color: rgb(70, 70, 70);
     font-weight: bold;
 }
-
-
 
 /* CSS */
 .cartItem-down button {
@@ -104,12 +102,12 @@ img.carImg:hover{
     gap: 40px;
 }
 
-.cartItem-total button{
+.cartItem-total button {
     width: 20%;
     font-size: 14px;
 }
 
-.title-item{
+.title-item {
     font-size: 20px;
     font-weight: 500;
 }

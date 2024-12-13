@@ -17,7 +17,7 @@ import Popular from './component/Popular/Popular'
 
 const App = () => {
 
-  const url = 'http://localhost:4000';
+  const url = 'http://localhost:5000';
 
   return (
     <ShopContextProvider>

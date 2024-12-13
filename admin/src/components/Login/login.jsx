@@ -4,19 +4,19 @@ import './login.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const Login = ({ setToken, token }) => {
+const Login = ({ setToken, token, url }) => {
     const [state, setState] = useState('Login');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('Login');
 
-    const url = "http://localhost:4005";
+    // const url = "http://localhost:4005";
     const navigate = useNavigate();
 
     const onSubmit = async (e) => {
         console.log('hello');
 
         e.preventDefault();
-        const user = await axios.post('http://localhost:4005/upload/admin', { email, password })
+        const user = await axios.post(`${url}/upload/admin`, { email, password })
         console.log(user.data);
 
 

@@ -13,6 +13,4 @@ router.use("/user", userControler);
 router.use("/shoop", authMiddleware, cartController);
 router.use("/order", authMiddleware, orderController);
 
-
-
 module.exports = router

@@ -5,7 +5,7 @@ import axios from "axios";
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
-    const url = 'http://localhost:4005';
+    const url = 'http://localhost:3000';
     const currency = "$"
     const title = "Paynament Method"
 
@@ -19,7 +19,6 @@ const ShopContextProvider = (props) => {
     }
 
     const addToCart = async (itemId, size) => {
-        console.log(size);
 
         if (!size) {
             toast.error('Select a size to add to cart');
@@ -82,18 +81,17 @@ const ShopContextProvider = (props) => {
         }
 
         if (token) {
-            const r = await axios.post(url + '/shoop/remove-cart', { itemId, size, quantity }, { headers: { token } })
-            console.log(r.data);
-        }
-        // console.log(cartData);
+            await axios.post(url + '/shoop/remove-cart', { itemId, size, quantity }, { headers: { token } });
 
-        setCartItems(cartData)
-        toast.error('Successfully removed from cart!')
+        }
+
+        setCartItems(cartData);
+        toast.error('Successfully removed from cart!');
     }
 
     const loadData = async (token) => {
         if (token) {
-            const response = await axios.post(url + "/shoop/get", {}, { headers: { token } })
+            const response = await axios.post(url + "/shoop/get", {}, { headers: { token } });
             setCartItems(response.data.cartData);
         }
     }
