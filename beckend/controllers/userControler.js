@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET_KEY } = require('../src/constant/constant');
+const { JWT_SECRET_KEY, ADMIN_PASSWORD, ADMIN_EMAIL } = require('../src/constant/constant');
 const UserModel = require('../src/models/userModel');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
@@ -52,12 +52,30 @@ router.post('/login', async (req, res) => {
             email: user.email
         }
 
-        const token = await jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: "3d" })
+        const token =  jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: "3d" })
         res.json({ success: true, token })
     }
     catch (error) {
         console.log(error);
         res.json({ success: false, message: 'Error while getting token from server' });
+    }
+})
+
+router.post('/admin', async (req, res) => {
+
+    try {
+        const { email, password } = req.body;
+
+        if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+            const token =  jwt.sign(email + password, JWT_SECRET_KEY)
+            res.json({ success: true, token })
+        }
+        else {
+            res.json({ success: false, message: 'Invalid credentials' })
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message });
     }
 })
 

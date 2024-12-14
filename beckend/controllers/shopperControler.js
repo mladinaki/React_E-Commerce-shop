@@ -82,22 +82,4 @@ router.get("/list/:id", async (req, res) => {
     }
 })
 
-router.post('/admin', async (req, res) => {
-
-    try {
-        const { email, password } = req.body;
-
-        if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-            const token =  jwt.sign(email + password, JWT_SECRET_KEY)
-            res.json({ success: true, token })
-        }
-        else {
-            res.json({ success: false, message: 'Invalid credentials' })
-        }
-    } catch (error) {
-        console.log(error);
-        res.json({ success: false, message: error.message });
-    }
-})
-
 module.exports = router
