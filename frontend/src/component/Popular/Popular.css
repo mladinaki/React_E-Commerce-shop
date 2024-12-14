@@ -23,8 +23,8 @@
 .populaye-item {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr;
-    gap: 20px;
-    box-shadow: 0px 2px 3px #efefef;
+    gap: 10px;
+    /* box-shadow: 0px 1px 1px #efefef; */
     padding-bottom: 50px;
 }
 
