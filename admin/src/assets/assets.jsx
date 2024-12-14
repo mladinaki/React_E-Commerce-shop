@@ -13,6 +13,7 @@ import del_icon from "./delete_icon.png";
 import user from "./user.png";
 import upload from "./upload.png";
 import cube from "./cube.jpg";
+import men_image from "./men_image.avif";
 
 export const assets = {
     shop,
@@ -20,7 +21,8 @@ export const assets = {
     del_icon,
     user,
     upload,
-    cube
+    cube,
+    men_image,
 }
 
 // export const menu_list = [

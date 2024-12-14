@@ -39,10 +39,9 @@ const Order = ({ token, url }) => {
                 <div className="listProduct-form-main">
                     <p>Product</p>
                     <p>Title</p>
-                    <p>Old Price</p>
                     <p>Adress</p>
-                    <p>Category</p>
-                    <p>Remove</p>
+                    <p>Totall</p>
+                    <p>Status</p>
                 </div>
                 <div className='item-image-main'>
                     {order.map((order, index) => (
