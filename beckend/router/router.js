@@ -7,7 +7,7 @@ const express = require('express');
 const { authMiddleware } = require("../middleware/auth");
 const { adminAuth } = require("../middleware/adminAuth");
 
-router.use('/upload',shooperAddUpload);
+router.use('/upload', shooperAddUpload);
 router.use("/images", express.static('uploads'));
 router.use("/user", userControler);
 router.use("/shoop", authMiddleware, cartController);

@@ -16,13 +16,17 @@ const Login = ({ setToken, token, url }) => {
         console.log('hello');
 
         e.preventDefault();
-        const user = await axios.post(`${url}/upload/admin`, { email, password })
+        const user = await axios.post(`${url}/user/admin`, { email, password })
         console.log(user.data);
 
 
         if (user.data.success) {
-            setToken(user.data.token)
+            setToken(user.data.token);
+            localStorage.setItem('token', user.data.token);
             navigate('/addproduct')
+        }
+        else {
+            alert(user.data.error = 'Not Authenticated - Please Login');
         }
     }
 
