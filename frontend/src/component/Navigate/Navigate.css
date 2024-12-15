@@ -20,14 +20,16 @@
 .nav-menu {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
   gap: 50px;
-  font-size: 18px;
+  /* font-size: 16px; */
   color: #6b6b6b;
   list-style: none;
 }
 
 .nav-menu li {
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .nav-menu li {
@@ -164,13 +166,6 @@
     border: 1px solid rgb(222, 222, 222);
   }
 
-  button.logins {
-    font-size: 12px;
-    border: 2px solid black;
-    position: relative;
-    gap: 20px;
-  }
-
   .nav-menu li {
     margin-left: 15px;
     gap: 2px;
@@ -178,24 +173,41 @@
   }
 
   .nav-logo img {
-    width: 30px;
+    width: 20px;
   }
 
-  .nav-logo h1 {
+  div.nav-logo h1 {
     /* background-color: #6b6b6b; */
-    font-size: 14px;
-    color: #a5a5a5;
+    font-size: 15px;
+    color: #787878;
     /* border: 5px solid black; */
   }
 
   .image-shop {
-    width: 27px;
+    width: 22px;
+  }
+
+  div .nav-login-cart button {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    width: 60px;
+    height: 30px;
+  }
+
+  div.nav-cart-count{
+    font-size: 10px;
+    /* margin: 0px auto; */
+    width: 20px;
+    height: 21px;
+    /* margin: 10px auto; */
   }
 }
 
 @media (max-width: 800px) {
   ul.nav-menu li {
-    font-size: 12px;
+    font-size: 14px;
     display: grid;
     gap: 5px;
     width: 20px
@@ -203,10 +215,19 @@
 
   .nav-logo {
     display: grid;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .nav-logo h1 {
-    font-size: 19px;
+    font-size: 15px;
+  }
+
+  div.nav-login-cart button{
+    font-size: 12px;
+    width: 60px;
+    height: 30px;
+    display: inline;
+    padding: 0;
+    margin: 0;
   }
 }

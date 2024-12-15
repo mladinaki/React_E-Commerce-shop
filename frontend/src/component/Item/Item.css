@@ -6,9 +6,8 @@
 }
 
 .item {
-  display: inline-block;
   border: 1px solid rgb(193, 193, 193);
-  padding: 1px;
+  padding: 7px;
   /* gap: 71px; */
 }
 
@@ -22,7 +21,6 @@
   color: rgb(161, 161, 161);
 }
 
-
 .item p {
   font-size: 16px;
   font-family: Oswald;
@@ -32,6 +30,7 @@
 
 .item img {
   transition: transform 0.3s ease-in-out;
+  padding: 7px;
 }
 
 .item img:hover {
@@ -96,9 +95,18 @@
 @media (max-width: 600px) {
   .item {
     width: 235px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
+    border: 1px solid rgb(189, 189, 189);
     font-size: 9px;
+    padding: 0;
+    display: inline;
+    margin: 100px auto;
+  }
+  .item img {
+    display:  flex;
+    /* width: 235px; */
+    padding: 10px;
   }
 
   .link-styles img {
