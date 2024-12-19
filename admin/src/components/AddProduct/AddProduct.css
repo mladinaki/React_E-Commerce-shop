@@ -75,16 +75,16 @@
 }
 
 .add-product button {
-  width: 25%;
+  width: 170px;
   position: relative;
   top: 0px;
   padding: 10px 0px;
   background: tomato;
   border: none;
   border-radius: 6px;
-  color: wheat;
-  font-weight: 400;
-  font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 12px;
   cursor: pointer;
 }
 
