@@ -12,7 +12,7 @@ import Order from './components/Order/Order';
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : '');
-  const url = 'http://localhost:3000';
+  const url = 'http://localhost:4000';
 
   useEffect(() => {
     localStorage.setItem('token', token)
