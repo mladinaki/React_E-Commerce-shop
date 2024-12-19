@@ -5,7 +5,7 @@ import axios from "axios";
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
-    const url = 'http://localhost:4000';
+    const url = 'http://practic-react-fhzk.vercel.app:4000';
     const currency = "$"
     const title = "Paynament Method"
 
